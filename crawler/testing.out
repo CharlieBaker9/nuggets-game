@@ -1,0 +1,27 @@
+./crawlertesting.sh 
+----------- tests that should fail -----------
+Output from zero arguments -- too few
+invalid number of arguments -- must have three arguments (seedURL pageDirectory maxDepth)
+
+Output from 1 arguments -- too few
+invalid number of arguments -- must have three arguments (seedURL pageDirectory maxDepth)
+
+Output from 2 arguments -- too few
+invalid number of arguments -- must have three arguments (seedURL pageDirectory maxDepth)
+
+Output from 4 arguments -- too many
+invalid number of arguments -- must have three arguments (seedURL pageDirectory maxDepth)
+
+Output from maxDepth of 12 -- to large
+max depth is not within the range [0,10]
+----------- letters test runs -----------
+Output from letters with depth 0
+Output from letters with depth 10
+
+----------- toscrape test runs -----------
+Output from toscrape with depth 0
+Output from toscrape with depth 1
+
+----------- wikipedia test runs -----------
+Output from wikipedia with depth 0
+Output from wikipedia with depth 1
