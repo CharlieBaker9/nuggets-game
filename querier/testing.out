@@ -1,0 +1,110 @@
+./testing.sh 
+----------- querier tests that all have syntax errors -----------
+Error: 'and' cannot be first
+Error: 'or' cannot be first
+Error: 'and' cannot be first
+Error: 'or' cannot be first
+Error: 'or' cannot be last
+Error: 'and' cannot be last
+Error: 'and' and 'or' cannot be adjacent
+Error: 'and' and 'and' cannot be adjacent
+Error: 'or' and 'and' cannot be adjacent
+Invalid input contains a character that is not a letter or space
+Invalid input contains a character that is not a letter or space
+Query: and 
+Query: or 
+Query: and earth 
+Query: or earth 
+Query: planet earth or 
+Query: planet earth and 
+Query: planet earth and or science 
+Query: planet earth and and science 
+Query: planet earth or and science 
+
+----------- querier tests using fuzzquery inputs -----------
+Query: inthe and quarters 
+{}
+No Documents match.
+Query: hangs or visited kahneman or beneath shopping 
+{}
+No Documents match.
+Query: nationally holery or predicts 
+{246=1, }
+Matches 1 documents (ranked):
+score    1  doc246: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-grand-design_405/index.html
+score    0  doc  0: (null)
+Query: answers axell conduct or christine or mississippians or sorbonne 
+{367=1, }
+Matches 1 documents (ranked):
+score    1  doc367: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/orchestra-of-exiles-the-story-of-bronislaw-huberman-the-israel-philharmonic-and-the-one-thousand-jews-he-saved-from-nazi-horrors_337/index.html
+score    0  doc  0: (null)
+Query: endowment or cosmic lover sketchbook and priest or bfed 
+{}
+No Documents match.
+Query: orientation iceland describe worse or defeating 
+{499=2, }
+Matches 1 documents (ranked):
+score    2  doc499: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/beowulf_126/index.html
+score    0  doc  0: (null)
+Query: clerks 
+{157=1, }
+Matches 1 documents (ranked):
+score    1  doc157: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/a-distant-mirror-the-calamitous-14th-century_652/index.html
+score    0  doc  0: (null)
+Query: arnold streusel or braved 
+{150=1, }
+Matches 1 documents (ranked):
+score    1  doc150: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-mathews-men-seven-brothers-and-the-war-against-hitlers-u-boats_408/index.html
+score    0  doc  0: (null)
+Query: multiplatform 
+{204=1, }
+Matches 1 documents (ranked):
+score    1  doc204: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/m-train_598/index.html
+score    0  doc  0: (null)
+Query: patience or nightstruck or bowerbird and antoinette and stances 
+{}
+No Documents match.
+
+----------- querier tests using valid inputs -----------
+Query: loyalist and sharply 
+{}
+No Documents match.
+Query: loyalist or sharply 
+{551=3, 457=2, }
+Matches 2 documents (ranked):
+score    3  doc551: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/a-flight-of-arrows-the-pathfinders-2_876/index.html
+score    2  doc457: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/keep-me-posted_594/index.html
+score    0  doc  0: (null)
+Query: moments and pittsburgh or surefire or captivate 
+{}
+No Documents match.
+Query: brady and reverent or rockpile 
+{18=1, }
+Matches 1 documents (ranked):
+score    1  doc 18: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/americas-cradle-of-quarterbacks-western-pennsylvanias-football-factory-from-johnny-unitas-to-joe-montana_974/index.html
+score    0  doc  0: (null)
+Query: play or health or sanitarium or formative and drawing 
+{163=1, 172=1, 114=1, 399=1, }
+Matches 4 documents (ranked):
+score    1  doc163: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/horror_31/index.html
+score    1  doc172: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/dracula-the-un-dead_370/index.html
+score    1  doc114: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/shoe-dog-a-memoir-by-the-creator-of-nike_831/index.html
+score    1  doc399: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/you-are-what-you-love-the-spiritual-power-of-habit_872/index.html
+score    0  doc  0: (null)
+Query: inducing and pangborn 
+{}
+No Documents match.
+Query: inducing or pangborn 
+{180=1, 420=1, 170=1, }
+Matches 3 documents (ranked):
+score    1  doc180: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/security_925/index.html
+score    1  doc420: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-secret-of-dreadwillow-carse_944/index.html
+score    1  doc170: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/needful-things_334/index.html
+score    0  doc  0: (null)
+Query: renner or compelled 
+{568=4, 545=1, }
+Matches 2 documents (ranked):
+score    4  doc568: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/that-darkness-gardiner-and-renner-1_743/index.html
+score    1  doc545: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/a-paris-apartment_612/index.html
+score    0  doc  0: (null)
+
